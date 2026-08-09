@@ -255,24 +255,6 @@ try:
 
         if prediction == 1:
 
-            audio_path = "alert.mpeg"
-
-            if os.path.exists(audio_path):
-
-                with open(audio_path, "rb") as audio_file:
-                    audio_bytes = audio_file.read()
-
-                audio_base64 = base64.b64encode(audio_bytes).decode()
-
-                st.markdown(
-                    f"""
-                    <audio autoplay>
-                        <source src="C:\Users\admin\Desktop\PROJECT\alert.mpeg" type="audio/mpeg">
-                    </audio>
-                    """,
-                    unsafe_allow_html=True
-                )
-
             st.error(
                 f"""
                 ⚠️ HEART DISEASE RISK DETECTED
